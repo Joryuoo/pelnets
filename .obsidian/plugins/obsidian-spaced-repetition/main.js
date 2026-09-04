@@ -11809,7 +11809,10 @@ var NoteQuestionParser = class {
           }
         }
         if (!result && this.flashcardTagList.length > 0) {
-          result = this.createTopicPathListFromSingleTag(this.flashcardTagList[0]);
+          result = this.createTopicPathList(
+            this.flashcardTagList,
+            this.flashcardTagList[0].position.start.line
+          );
         }
       }
     }
