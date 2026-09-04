@@ -8,13 +8,17 @@ When automatically or manually generating new flashcard notes for the PhilNITS e
 * **Location:** Save the file in the designated year folder (e.g., `2025/`). Do NOT overwrite any existing draft notes (like `2025S_FE_AM_1.md`) unless explicitly instructed.
 
 ## 2. Metadata (Frontmatter)
-Every flashcard must begin with the following metadata tags so the Spaced Repetition plugin and vault organization work correctly:
-```md
-Created: YYYY-MM-DD HH:mm
-Category: #appropriate-category
-Status: #philnits
+Every flashcard must begin with the following YAML frontmatter tags so the Spaced Repetition plugin and vault organization work correctly:
+```yaml
+---
+created: YYYY-MM-DD HH:mm
+status: "#philnits"
+tags:
+  - appropriate-category/YYYY
+  - year/YYYY
+---
 ```
-*Note: Refer to the `README.md` for the list of available categories (e.g., `#number-systems`, `#database`, etc.).*
+*Note: The tags should include the topic category appended with the year, as well as a dedicated year tag (e.g. `database/2025` and `year/2025`). Refer to the `README.md` for the list of available categories.*
 
 ## 3. Question Formatting (Front of Card)
 The structure of the question side depends on the content of the question:
@@ -45,9 +49,14 @@ End the flashcard with a horizontal rule `---` followed by a `# References` sect
 
 ### Example Template (Image-Based Question)
 ```md
-Created: 2026-09-04 18:45
-Category: #database #sql
-Status: #philnits
+---
+created: 2026-09-04 18:45
+status: "#philnits"
+tags:
+  - database/2025
+  - sql/2025
+  - year/2025
+---
 
 # 2025A_FE-A_21
 
