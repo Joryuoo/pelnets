@@ -26,17 +26,26 @@ Take note of the following labelling conventions.
 
 - note names should correspond to the PDF related to it together with the question number.
   - ie. question #55 `2023A_FE_AM_Questions.pdf` turns into `2023A_FE_AM_55`
-- always add a `#category` to the `Category:` section in the metadata heading in order for us to separate the decks.
+- always add both the **topic category with the exam year** (`category-name/YYYY`) and the **exam year tag** (`year/YYYY`) to the `tags:` list in the frontmatter.
+  - this structure automatically populates:
+    - **Topic decks** (e.g. `digital-logic`)
+    - **Topic/Year subdecks** (e.g. `digital-logic/2024`)
+    - **Yearly decks** containing all questions for that exam year (e.g. `year/2024`)
   - view the list of [[#Available Flashcard Categories]].
+  - multiple topic tags can be added if a question covers multiple domains (e.g. `math/2019` and `programming/2019`).
   - feel free to add more categories if none of the existing ones cover the topic your question is related to.
     - discuss it between the contributors before adding it.
 
 ### Flashcard Format
 
 ```md
-Created: YYYY-MM-DD HH:mm
-Category: #category-from-list
-Status: #philnits
+---
+created: YYYY-MM-DD HH:mm
+status: "#philnits"
+tags:
+  - category-name/YYYY
+  - year/YYYY
+---
 
 # 2024S_FE-A_83
 
@@ -56,7 +65,8 @@ You can also copy paste images into the explanation with CTRL + V.
 
 This is the end of the explanation, I hope you now understand why c) is the answer at the first line of the card's back.
 
-## %% ignore this, it's the flashcard terminator %%
+%% ignore this, it's the flashcard terminator %%
+---
 
 # References %% add your references here %%
 
@@ -124,3 +134,7 @@ This is the end of the explanation, I hope you now understand why c) is the answ
 	- system administration, server provisioning, automated deployment, system integration, containerization
 - `#automata-theory`
 	- state transitions, automata questions
+- `#software-engineering`
+	- software lifecycle, design patterns, architecture, maintenance
+- `#object-oriented-programming`
+	- OOP concepts, inheritance, polymorphism, encapsulation, classes
