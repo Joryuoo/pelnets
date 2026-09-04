@@ -32,7 +32,9 @@
                                            "#devops",
                                            "#object-oriented-programming",
                                            "#automata-theory",
-                                           "#data-encoding"
+                                           "#data-encoding",
+                                           "#cloud-computing",
+                                           "#artificial-intelligence"
                                        ],
                      "convertFoldersToDecks":  false,
                      "burySiblingCards":  false,

@@ -3,7 +3,7 @@
 A flashcard Obsidian vault containing all past exam questions & explanations for the PhilNITS exam: created to collaboratively prepare for the upcoming PhilNITS exam in a single week.
 
 > [!NOTE]
-> This repository is a fork maintained by [@Joryuoo](https://github.com/Joryuoo).
+> This repository is a fork maintained by [@Joryuoo](https://github.com/Joryuoo) and [@jangkayl](https://github.com/jangkayl).
 > - **Fork Repository:** [https://github.com/Joryuoo/pelnets.git](https://github.com/Joryuoo/pelnets.git)
 > - **Original Upstream:** [https://github.com/usc-cisco/philnits-vault](https://github.com/usc-cisco/philnits-vault)
 
@@ -12,7 +12,7 @@ A flashcard Obsidian vault containing all past exam questions & explanations for
 This fork significantly improves the original vault's flashcard organization and architecture:
 
 1. **Yearly Exam Decks (`#year/YYYY`)**:
-   - Allows studying **all questions from a specific exam year** (e.g., all questions under 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, or 2025) in a single consolidated deck, regardless of category.
+   - Allows studying **all questions from a specific exam year** (e.g., all questions under 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, or 2026) in a single consolidated deck, regardless of category.
 2. **Topic by Year Subdecks (`#topic/YYYY`)**:
    - Every topic category is partitioned into subdecks by exam year (e.g., `networking/2022`, `digital-logic/2018`), allowing targeted subject review for specific years.
 3. **Simultaneous 3-Way Deck Organization**:
@@ -21,11 +21,11 @@ This fork significantly improves the original vault's flashcard organization and
      - By **subject and year** (e.g. `networking` → `2022`)
      - By **entire exam year** (e.g. `year` → `2022`)
 4. **Standard YAML Frontmatter (`tags: [...]`)**:
-   - Migrated all 587+ question notes across all years to official Obsidian YAML frontmatter format.
+   - Migrated all question notes across all years to official Obsidian YAML frontmatter format.
    - **Update-proof & future-proof:** Works natively with the official Obsidian Spaced Repetition plugin without custom plugin patches, so updating the plugin will never break deck organization.
    - **Clean card display:** Metadata is properly encapsulated in frontmatter so raw header text (`Category: #...`) no longer clutters the front of flashcards.
 5. **Complete Category Registration**:
-   - Registered all 28 subject tags in plugin settings (including previously untracked tags such as `software-engineering`, `object-oriented-programming`, `devops`, `software`, `software-testing`, `automata-theory`, and `data-encoding`).
+   - Registered all 30 subject tags in plugin settings (including `#cloud-computing` and `#artificial-intelligence`). Refer to [[Registered_Categories.md]] for the complete directory.
 
 ## Usage
 
@@ -196,3 +196,10 @@ This is the end of the explanation, I hope you now understand why c) is the answ
 	- software lifecycle, design patterns, architecture, maintenance
 - `#object-oriented-programming`
 	- OOP concepts, inheritance, polymorphism, encapsulation, classes
+- `#cloud-computing`
+	- IaaS, PaaS, SaaS, private/public/hybrid cloud, multi-tenancy
+- `#artificial-intelligence`
+	- Machine learning, deep learning, neural networks, NLP, conversational AI
+
+> [!TIP]
+> For detailed topic descriptions, keywords, and mapping rules, see [[Registered_Categories.md]].
