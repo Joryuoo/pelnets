@@ -1,8 +1,9 @@
-Created: {{date:YYYY-MM-DD}} {{time:HH:mm}}
-Category: 
-Status: #philnits
-
-
+---
+created: {{date:YYYY-MM-DD}} {{time:HH:mm}}
+status: "#philnits"
+tags:
+  - 
+---
 
 # {{title}} %% ex. 2024S_FE-A_83 %%
 
