@@ -29,11 +29,44 @@ This fork significantly improves the original vault's flashcard organization and
 
 ## Usage
 
+### 1. Clone the Repository
+
 ```bash
+# Clone this fork:
 git clone https://github.com/Joryuoo/pelnets.git
+
+# (Or if you are cloning the original upstream repository:)
+# git clone https://github.com/usc-cisco/philnits-vault.git
 ```
 
-Then, open the vault folder using Obsidian and click the **Review flashcards** button on the left ribbon.
+### 2. Open the Vault in Obsidian
+
+**Step 1:** Open Obsidian. At the bottom-left corner of the sidebar, click on your current vault name and select **Manage vaults...**:
+
+![Manage vaults](assets/step1-manage-vaults.png)
+
+**Step 2:** Under **Open folder as vault**, click **Open**:
+
+![Open folder as vault](assets/step2-open-folder-as-vault.png)
+
+> [!TIP]
+> Navigate to the folder where you cloned the repository:
+> - Select **`pelnets`** if you cloned this fork repo.
+> - Select **`philnits-vault`** if you cloned the original upstream repo.
+
+**Step 3:** Trust the author & enable plugins:
+
+![Trust author and enable plugins](assets/step3-trust-author.png)
+
+> [!CAUTION]
+> **Trust at your own risk 💀**
+> *Trust me or not, but you can trust me the same way you trust an AI with 100MB of confidential data just to draft a 2-sentence email.*
+>
+> *(I promise there's no crypto miner in here, just IT exam questions that will hurt your brain equally as much. Source: trust me bro).*
+>
+> Click **"Trust author and enable plugins"** so that the Spaced Repetition flashcard system and vault configurations can run.
+
+**Step 4:** Once the vault opens, click the **Review flashcards** button on the left ribbon to start practicing!
 
 ### Troubleshooting: Can't Review Previously-Reviewed Flashcards
 
