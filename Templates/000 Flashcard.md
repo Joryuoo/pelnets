@@ -2,7 +2,8 @@
 created: {{date:YYYY-MM-DD}} {{time:HH:mm}}
 status: "#philnits"
 tags:
-  - 
+  - appropriate-category/YYYY
+  - year/YYYY
 ---
 
 # {{title}} %% ex. 2024S_FE-A_83 %%
@@ -12,7 +13,7 @@ a) 83.25
 b) 83.5
 c) 291.25
 d) 291.5
-? 
+?
 c) 291.25
 ### Step 1: Convert the whole part (123) to decimal.
 

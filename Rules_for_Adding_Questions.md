@@ -18,7 +18,12 @@ tags:
   - year/YYYY
 ---
 ```
-*Note: The tags should include the topic category appended with the year, as well as a dedicated year tag (e.g. `database/2025` and `year/2025`). Refer to the `README.md` for the list of available categories.*
+> [!IMPORTANT]
+> The category tag **MUST** be one of the officially registered categories listed in [[Registered_Categories.md]].
+> - Always append the exam year to the category (e.g. `information-management/2025`).
+> - Always include the dedicated year tag (e.g. `year/2025`).
+> - Do **NOT** invent new or informal tags (e.g., do NOT use `database`, `sql`, `security`, `network`, `oop`, `management`). Consult [[Registered_Categories.md]] for the correct mapping.
+
 
 ## 3. Question Formatting (Front of Card)
 The structure of the question side depends on the content of the question:
@@ -53,8 +58,7 @@ End the flashcard with a horizontal rule `---` followed by a `# References` sect
 created: 2026-09-04 18:45
 status: "#philnits"
 tags:
-  - database/2025
-  - sql/2025
+  - information-management/2025
   - year/2025
 ---
 
