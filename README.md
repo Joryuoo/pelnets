@@ -2,13 +2,38 @@
 
 A flashcard Obsidian vault containing all past exam questions & explanations for the PhilNITS exam: created to collaboratively prepare for the upcoming PhilNITS exam in a single week.
 
+> [!NOTE]
+> This repository is a fork maintained by [@Joryuoo](https://github.com/Joryuoo).
+> - **Fork Repository:** [https://github.com/Joryuoo/pelnets.git](https://github.com/Joryuoo/pelnets.git)
+> - **Original Upstream:** [https://github.com/usc-cisco/philnits-vault](https://github.com/usc-cisco/philnits-vault)
+
+## What's New in this Fork
+
+This fork significantly improves the original vault's flashcard organization and architecture:
+
+1. **Yearly Exam Decks (`#year/YYYY`)**:
+   - Allows studying **all questions from a specific exam year** (e.g., all questions under 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, or 2025) in a single consolidated deck, regardless of category.
+2. **Topic by Year Subdecks (`#topic/YYYY`)**:
+   - Every topic category is partitioned into subdecks by exam year (e.g., `networking/2022`, `digital-logic/2018`), allowing targeted subject review for specific years.
+3. **Simultaneous 3-Way Deck Organization**:
+   - Study however you prefer without losing other views:
+     - By **broad subject** (e.g. `networking`)
+     - By **subject and year** (e.g. `networking` → `2022`)
+     - By **entire exam year** (e.g. `year` → `2022`)
+4. **Standard YAML Frontmatter (`tags: [...]`)**:
+   - Migrated all 587+ question notes across all years to official Obsidian YAML frontmatter format.
+   - **Update-proof & future-proof:** Works natively with the official Obsidian Spaced Repetition plugin without custom plugin patches, so updating the plugin will never break deck organization.
+   - **Clean card display:** Metadata is properly encapsulated in frontmatter so raw header text (`Category: #...`) no longer clutters the front of flashcards.
+5. **Complete Category Registration**:
+   - Registered all 28 subject tags in plugin settings (including previously untracked tags such as `software-engineering`, `object-oriented-programming`, `devops`, `software`, `software-testing`, `automata-theory`, and `data-encoding`).
+
 ## Usage
 
 ```bash
-git clone git@github.com:Luzefiru/philnits-vault.git
+git clone https://github.com/Joryuoo/pelnets.git
 ```
 
-Then, we open the `philnits-vault` using Obsidian and we can press the `Review flashcards` button on the left ribbon.
+Then, open the vault folder using Obsidian and click the **Review flashcards** button on the left ribbon.
 
 ### Troubleshooting: Can't Review Previously-Reviewed Flashcards
 
