@@ -91,6 +91,7 @@ Take note of the following labelling conventions.
     - **Yearly decks** containing all questions for that exam year (e.g. `year/2024`)
   - view the list of [[#Available Flashcard Categories]].
   - multiple topic tags can be added if a question covers multiple domains (e.g. `math/2019` and `programming/2019`).
+  - **Image format for complex questions:** If the question contains a diagram, flowchart, table, SQL code block, or heavily formatted lists, do NOT type out the question text. Extract a screenshot of the *entire question block* from the PDF into the `Files/` directory and embed it as `![[{Year}{Season}_FE-{Paper}_Q{QuestionNumber}_full.png]]`.
   - feel free to add more categories if none of the existing ones cover the topic your question is related to.
     - discuss it between the contributors before adding it.
 

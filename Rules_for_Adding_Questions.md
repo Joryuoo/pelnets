@@ -47,9 +47,6 @@ Use a single `?` on a new line to separate the front of the flashcard (the quest
   * Use **Markdown tables** to trace state machines, memory states, or data structures.
   * Use **LaTeX formatting** (e.g., `$x^2 + y^2$`) for all mathematical formulas, calculations, and probability equations.
 
-## 6. References
-End the flashcard with a horizontal rule `---` followed by a `# References` section linking to the relevant topics discussed in the explanation.
-
 ---
 
 ### Example Template (Image-Based Question)
@@ -70,8 +67,4 @@ a) department_id IN (SELECT department_id FROM Departments WHERE location = 'New
 
 ### Explanation
 The subquery `(SELECT department_id FROM Departments WHERE location = 'New York')` retrieves...
-
----
-# References
-- [SQL Subqueries]
 ```
