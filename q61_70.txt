@@ -1,0 +1,201 @@
+Q61. 
+Which of the following is an example of RPA that is used to proceed with business 
+innovation with the aim of resolving management issues, such as a shortage of staff members? 
+ 
+a) Deploying robots for assembly work instead of employees engaged in the assembly of 
+components on the manufacturing line. 
+b) Processing standardized routine activities such as data input, and cross-checking of the 
+business system by software instead of the clerical staff members. 
+c) Replacing manned stores with unmanned stores run by cameras and an electronic 
+payment system for analysis of IC tags and images. 
+d) Replacing transfer of stored products through manual operations by using a forklift or 
+something similar with an automated warehouse system where computer control has 
+rendered human labor obsolete. 
+ 
+ 
+ 
+ 
+ 
+ 
+– 23 –
+Q62. 
+Which of the following is a system where the use of a state transition diagram is 
+appropriate when the system is designed? 
+ 
+a) Electricity charge calculation system that calculates charges based on the amount of 
+power usage from power meter readings. 
+b) Greenhouse control system that keeps the environment in a greenhouse optimal based on 
+the data of an installed sensor. 
+c) Inventory control system that performs the collection and aggregation of inventory 
+assets at the end of every month and at the time of settlement. 
+d) System that measures the operational status of the system resources and creates a report. 
+ 
+ 
+Q63. 
+Which of the following is an explanation of the digital divide? 
+ 
+a) It refers to an economic or social gap that occurs due to differences in abilities and 
+opportunities to use PCs and communications. 
+b) It refers to communications and broadcast services that any citizen can access with 
+standard charges, without any differences between regions. 
+c) It refers to the ability of citizens to participate directly in the policies of government and 
+autonomous bodies by using the Internet. 
+d) It refers to the provision of all services in a single place for each event of the daily life of 
+citizens or each field of corporate activity. 
+ 
+ 
+ 
+ 
+ 
+– 24 –
+Q64. 
+Procurement is performed by using the comprehensive evaluation bidding method under 
+the conditions shown below. When the bidding prices and technology points of Companies A 
+to D are as shown in the table below, which of the following is the successful bidder? 
+ 
+[Conditions] 
+(1) The bidder with the highest comprehensive evaluation points obtained by summing 
+up the price points and the technology points is the successful bidder. 
+(2) The target price is 100,000 dollars. Any bids that exceed the target price are not 
+evaluated. 
+(3) The price points are calculated by the formula shown below. 
+[1 − (Bidding price / Target price)] × 100 
+ 
+[Bidding price and technology points of Companies A to D] 
+ 
+Bidding price (1,000 dollars) 
+Technology points 
+Company A 
+70 
+50 
+Company B 
+80 
+65 
+Company C 
+90 
+80 
+Company D 
+110 
+100 
+ 
+a) Company A 
+b) Company B 
+c) Company C 
+d) Company D 
+ 
+ 
+Q65. 
+Which of the following is an explanation of green procurement (sustainable 
+procurement)? 
+ 
+a) It refers to a certificate that enables commercial trading of green power that is generated 
+from natural energy such as sunlight, biomass, wind power, and geothermal heat. 
+b) It refers to a mass promotion of environmental protection activities and fund raising 
+from investors for the environmental protection 
+c) It refers to a preferential purchase of products and services that exert a lower 
+environmental burden. 
+d) It refers to international standards that employ labels to certify that a product contributes 
+to environmental protection. 
+ 
+ 
+ 
+ 
+ 
+– 25 –
+Q66. 
+Among the mechanisms that are utilized on the Internet, which of the following is an 
+explanation of crowdfunding? 
+ 
+a) It refers to a company placing an order with a person who is judged to be qualified to 
+outsource work to an unspecified number of people on the website through prior 
+notification of business operations. 
+b) It refers to a web service for individuals that displays information on the account 
+transactions of multiple financial institutions at once by a single authentication through 
+prior registration of multiple account information. 
+c) It refers to payment from an advertiser to a website operator when a person who is 
+browsing the website purchases a product from the EC site by using the link from the 
+published advertisement. 
+d) It refers to raising money from an unspecified number of individuals who support a 
+business project that is published on the website, and who expect to obtain products and 
+rights in return. 
+ 
+ 
+Q67. 
+Which of the following is a characteristic of the maturity stage in the product life cycle? 
+ 
+a) Demand decreases and some companies start withdrawing. A company determines 
+whether it can be a strong player in this stage and considers advancing into alternative 
+markets. 
+b) Demand grows, and the product differentiation and segmentation of the market become 
+evident. Competition intensifies, and it becomes important to add new models and 
+reduce cost. 
+c) Demand is partial, and cultivation of new demand is the key to success or failure. It is 
+necessary to persuade specific targets with conviction. 
+d) The market begins to understand the value of a product. Both the product line and the 
+channel must be expanded. Sales increase, but investment is also needed in this stage. 
+ 
+ 
+Q68. 
+Which of the following is mostly tacit knowledge? 
+ 
+a) A list of countries and their capitals 
+b) An inventory of assets 
+c) Contents of a washing machine manual 
+d) How to ride a bicycle 
+ 
+ 
+ 
+ 
+ 
+– 26 –
+Q69. 
+Which of the following is an appropriate example of a core technology for the creation 
+of competitive advantage?  
+ 
+a) It is a development technology that combines general components with the purpose of 
+fast-track development and fast-track market introduction of products. 
+b) It is a device technology that employs the same CPU core as that of competitors and 
+enhances the portability of software. 
+c) It is an idle reduction technology of an automobile engine that cannot be imitated by 
+competitors. 
+d) It is an interface technology whose purpose is to create standard interfaces by forming an 
+alliance and use them commonly. 
+ 
+ 
+Q70. 
+A product that is produced through four (4) processes of A, B, C, and D must be produced 
+in a quantity of 1,000 units per month. The table below lists the manufacturing time per unit, 
+number of machines owned, and monthly production capacity in hours per machine for each 
+process. Which of the following is a process that is lacking in capability? 
+ 
+Process 
+Manufacturing time 
+per unit (hours) 
+Number of machines 
+owned (units) 
+Monthly 
+production capacity 
+(hours/machine)  
+A 
+0.4 
+3 
+150 
+B 
+0.3 
+2 
+160 
+C 
+0.7 
+4 
+170 
+D 
+1.2 
+7 
+180 
+ 
+a) A 
+b) B 
+c) C 
+d) D 
+ 
+ 
