@@ -14,7 +14,7 @@ Every flashcard must begin with the following YAML frontmatter tags so the Space
 created: YYYY-MM-DD HH:mm
 status: "#philnits"
 tags:
-  - appropriate-category/YYYY
+  - software/YYYY
   - year/YYYY
 ---
 ```

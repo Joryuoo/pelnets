@@ -31,15 +31,16 @@ To ensure consistency, readability, and token efficiency, strictly follow these 
 - **NO MERMAID CHARTS:** To save tokens, do not use Mermaid diagrams. Use standard markdown text, bullet points, and markdown tables to trace execution steps or variable states.
 
 ## 5. YAML Metadata and Tagging
-- Strictly use the approved 29-category list for the primary tag.
-- PM questions are typically assigned tags like `algorithms`, `object-oriented-programming`, `software-engineering`, `cybersecurity`, `networking`, `data-structures`, etc.
+- **Strict Tag List:** You may select multiple categories if the question heavily features them, but you MUST ONLY select from this exact list:
+  `number-systems`, `operating-systems`, `project-management`, `accounting`, `probability`, `cybersecurity`, `systems-architecture`, `sets`, `digital-logic`, `algorithms`, `hardware`, `service-management`, `data-structures`, `programming`, `web-technologies`, `information-management`, `statistics`, `networking`, `math`, `business-administration`, `software`, `software-testing`, `software-engineering`, `devops`, `object-oriented-programming`, `automata-theory`, `data-encoding`, `cloud-computing`, `artificial-intelligence`
+- **NO INVENTED TAGS:** Do not use `database`, `multimedia`, `security`, `PhilNITS`, etc. Map them to the allowed list (e.g., `information-management`, `data-encoding`, `cybersecurity`).
 - Format:
 ```yaml
 ---
 created: YYYY-MM-DD HH:MM
 status: "#philnits"
 tags:
-  - <allowed-category>/<year>
+  - software/<year>
   - year/<year>
 ---
 ```

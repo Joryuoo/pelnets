@@ -17,7 +17,7 @@ Every flashcard must include both the **category with the exam year** and the **
 created: YYYY-MM-DD HH:mm
 status: "#philnits"
 tags:
-  - appropriate-category/YYYY
+  - software/YYYY
   - year/YYYY
 ---
 ```

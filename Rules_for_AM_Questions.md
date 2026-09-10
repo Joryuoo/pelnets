@@ -16,8 +16,8 @@ Every flashcard must have this exact YAML block:
 created: YYYY-MM-DD HH:mm
 status: "#philnits"
 tags:
-  - <allowed-category-1>/YYYY
-  - <allowed-category-2>/YYYY
+  - software/YYYY
+  - software/YYYY
   - year/YYYY
 ---
 ```

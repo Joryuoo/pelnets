@@ -102,7 +102,7 @@ Take note of the following labelling conventions.
 created: YYYY-MM-DD HH:mm
 status: "#philnits"
 tags:
-  - category-name/YYYY
+  - software/YYYY
   - year/YYYY
 ---
 
