@@ -39,6 +39,7 @@ If the question is entirely plain text (no tables, diagrams, code blocks, or com
 If the question contains ANY tables, diagrams, code blocks, or complex math:
 * **DO NOT** type out the question text.
 * Embed a screenshot exactly like this: `![[{Year}{Season}_FE_AM_Q{QuestionNumber}_full.png]]`
+* **CRITICAL IMAGE NAMING RULE:** Make absolutely sure you reference the correct image name. If a question fits on one page, it is named `_full.png`. If the text clearly indicates the question spans multiple pages, reference `_p1.png`, `_p2.png`, etc. Do not use `_full.png` if it is a multi-page question.
 * Do **NOT** ever output placeholders like `*(Visualization omitted to save tokens)*`.
 * You may still type out the `a, b, c, d` choices below the image if the choices themselves are simple text, but never the complex question body.
 
@@ -51,6 +52,8 @@ If the question contains ANY tables, diagrams, code blocks, or complex math:
 * **CRITICAL:** Do **NOT** use Mermaid charts or diagrams under any circumstances to save tokens.
 * Use plain text, bullet points, markdown tables, or LaTeX to explain the concept step-by-step.
 * The explanation must align with the official answer key. If the official question has a typo but the answer key expects a certain answer, explain the answer key's logic.
+* **New Rule:** Briefly explain the other choices concisely and why they are wrong, IF doing so adds educational value (not every question needs it, use judgment).
+* **New Rule:** You may use manual markdown tables or simple ASCII charts to illustrate concepts if helpful. Never use mermaid.
 
 ---
 

@@ -29,6 +29,8 @@ To ensure consistency, readability, and token efficiency, strictly follow these 
 - Start the explanation section with `### Explanation`.
 - The AI/Subagent generating the explanation **must** be provided with the raw extracted text of the PM question (e.g., via a temporary JSON file). It cannot accurately explain complex algorithms, routing tables, or Java code tracing without reading the scenario.
 - **NO MERMAID CHARTS:** To save tokens, do not use Mermaid diagrams. Use standard markdown text, bullet points, and markdown tables to trace execution steps or variable states.
+- **New Rule:** Briefly explain the other choices concisely and why they are wrong, IF doing so adds educational value.
+- **New Rule:** You may use manual markdown tables or simple ASCII charts to illustrate concepts if helpful. Never use mermaid.
 
 ## 5. YAML Metadata and Tagging
 - **Strict Tag List:** You may select multiple categories if the question heavily features them, but you MUST ONLY select from this exact list:
