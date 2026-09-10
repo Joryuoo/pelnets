@@ -1,6 +1,14 @@
 # <img src="assets/icon-192.png" width="40" align="top" alt="pelnets logo" /> philnits-vault
 
-A flashcard Obsidian vault containing all past exam questions & explanations for the PhilNITS exam: created to collaboratively prepare for the upcoming PhilNITS exam in a single week.
+A comprehensive flashcard Obsidian vault and **Ultimate PhilNITS Reviewer** containing all past exam questions & explanations for the PhilNITS exam. Created to collaboratively prepare for the upcoming PhilNITS Fundamentals of IT Engineers (FE) exam.
+
+🌟 **[Access the Web App Reviewer: pelnets.vercel.app/decks](https://pelnets.vercel.app/decks)** 🌟
+
+We've built a dedicated **PhilNITS Reviewer Web App** to make studying easier than ever!
+* **Offline Mode (PWA):** Install it on your phone or desktop and review questions anytime, anywhere, completely offline!
+* **Spaced Repetition System (SRS):** Built-in algorithm to help you memorize efficiently and focus on your weak points.
+* **Complete Q&A:** Beautifully rendered questions, images, and detailed explanations straight from this vault.
+* **Perfect for SEO:** The ultimate free online PhilNITS reviewer and study guide for passing the ITPEC FE exam.
 
 > [!NOTE]
 > This repository is a fork maintained by [@Joryuoo](https://github.com/Joryuoo) and [@jangkayl](https://github.com/jangkayl).
