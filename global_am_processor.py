@@ -4,6 +4,42 @@ import json
 import re
 import fitz  # PyMuPDF
 
+def get_tight_clip(page, y_start, y_end):
+    blocks = page.get_text("blocks")
+    content_y0 = y_end
+    content_y1 = y_start
+    
+    drawings = page.get_drawings()
+    for d in drawings:
+        r = d["rect"]
+        if r.y1 > y_start and r.y0 < y_end:
+            content_y0 = min(content_y0, max(y_start, r.y0))
+            content_y1 = max(content_y1, min(y_end, r.y1))
+
+    for b in blocks:
+        by0, by1 = b[1], b[3]
+        if by1 > y_start and by0 < y_end:
+            if b[4].strip() == "":
+                if b[6] != 1:
+                    continue
+            
+            text_str = b[4].strip()
+            if re.match(r"^\-\s*\d+\s*\-$", text_str):
+                continue
+                
+            content_y0 = min(content_y0, max(y_start, by0))
+            content_y1 = max(content_y1, min(y_end, by1))
+
+    pad = 10
+    final_y0 = max(y_start, content_y0 - pad)
+    final_y1 = min(y_end, content_y1 + pad)
+    
+    if final_y1 <= final_y0:
+        return None
+        
+    return fitz.Rect(0, final_y0, page.rect.x1, final_y1)
+
+
 def process_am_pdf(pdf_path, out_dir):
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
@@ -19,19 +55,15 @@ def process_am_pdf(pdf_path, out_dir):
         page = doc[p]
         text = page.get_text()
         
-        # Look for "Q[1-80]." or "Q[1-80] " 
-        # (Handling the edge case where the period is missing, e.g. "Q35 ")
         for q in range(1, 81):
             if q in q_positions:
                 continue
                 
-            # Try to find exactly "Q1." or "Q1 "
             rects = page.search_for(f"Q{q}.")
             if not rects:
                 rects = page.search_for(f"Q{q} ")
                 
             if rects:
-                # Filter out false positives (must be on the left side of the page generally)
                 valid_rects = [r for r in rects if r.x0 < 150]
                 if valid_rects:
                     r = valid_rects[0]
@@ -45,7 +77,6 @@ def process_am_pdf(pdf_path, out_dir):
 
     # Add a pseudo Q81 to mark the end of Q80
     last_q = max(q_positions.keys())
-    last_p = q_positions[last_q][0]
     q_positions[81] = (doc.page_count - 1, doc[doc.page_count - 1].rect.y1)
 
     extracted_texts = {}
@@ -57,7 +88,7 @@ def process_am_pdf(pdf_path, out_dir):
         start_p, start_y = q_positions[q]
         end_p, end_y = q_positions[q + 1]
         
-        # 1. Extract Text for the question
+        # 1. Extract Text
         text = ""
         for p in range(start_p, end_p + 1):
             page = doc[p]
@@ -68,29 +99,29 @@ def process_am_pdf(pdf_path, out_dir):
             clip = fitz.Rect(0, y0, rect.x1, y1)
             text += page.get_text(clip=clip) + "\n"
             
-        extracted_texts[str(q)] = text
-
-        # 2. Crop Image for the question
-        # If it spans multiple pages, we just save the first page or combine them (usually AM questions fit on one page or two).
-        # We will save _p1, _p2 if it spans multiple pages.
+        # 2. Crop Image
         part = 1
+        image_tags = []
         for p in range(start_p, end_p + 1):
             page = doc[p]
             rect = page.rect
             y0 = start_y if p == start_p else 0
             y1 = end_y if p == end_p else rect.y1
             
-            if y1 - y0 < 20:
+            tight_clip = get_tight_clip(page, y0, y1)
+            if not tight_clip or (tight_clip.y1 - tight_clip.y0 < 20):
                 continue
                 
-            clip = fitz.Rect(0, y0, rect.x1, y1)
-            pix = page.get_pixmap(clip=clip, dpi=150)
+            pix = page.get_pixmap(clip=tight_clip, dpi=150)
             
-            # Use full image name like 2020A_FE_AM_Q1_full.png if it's 1 part, else append _p1
             suffix = "_full" if start_p == end_p else f"_p{part}"
-            out_path = os.path.join(out_dir, f"{base_name}_Q{q}{suffix}.png")
+            filename = f"{base_name}_Q{q}{suffix}.png"
+            out_path = os.path.join(out_dir, filename)
             pix.save(out_path)
+            image_tags.append(f"![[{filename}]]")
             part += 1
+
+        extracted_texts[str(q)] = text + "\n\n" + "\n".join(image_tags)
 
     # Save Text JSON
     json_path = os.path.join(os.path.dirname(pdf_path), f"{base_name}_Questions_Text.json")
