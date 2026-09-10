@@ -103,4 +103,4 @@ The problem states that "each continent has at least one country"...
 To prevent API quota limits and token bloat during generation, AI subagents should not be forced to read massive JSON files containing the entire exam. Instead, the orchestrating script must extract the specific raw text for the assigned question(s) and save it to a small, isolated temporary file (e.g., scratch/Q1_context.txt). The subagent is then instructed to read ONLY this isolated text file to get its context.
 
 ## 7. Model Restrictions
-- **NEVER USE ANY FLASH MODEL.** Under absolutely no circumstances should `flash` OR `flash_lite` be used. All generation, whether in the main thread or via subagents, MUST use the primary model (e.g., by selecting `inherit` for subagents). All Flash-family models are strictly banned.
+- **ONLY USE THE REGULAR PRO MODEL.** Under absolutely no circumstances should `flash` OR `flash_lite` be used. All generation, whether in the main thread or via subagents, MUST use the regular `pro` model exclusively (by explicitly selecting `pro` when launching subagents). All Flash-family models are strictly banned.
