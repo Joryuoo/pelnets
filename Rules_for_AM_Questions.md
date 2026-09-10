@@ -99,7 +99,8 @@ b) A (1..1), B (1..*), C (1..1), D (1..*)
 The problem states that "each continent has at least one country"...
 ```
 
-## 6. Model and Execution Rules
-- **Do not use subagents:** Process questions sequentially and manually in the main thread. Do not orchestrate or invoke subagents for question processing.
-- **Stick to the current model:** Do not use `flash` or any other model. Use the primary model for all processing.
-- **Targeted Context (Token Optimization):** To prevent API quota limits and token bloat during generation, you should not be forced to read massive JSON files containing the entire exam all at once. Instead, extract the specific raw text for the assigned question(s) and save it to a small, isolated temporary file (e.g., scratch/Q1_context.txt). Then read ONLY this isolated text file to get context for generation.
+## 6. Targeted Context (Token Optimization)
+To prevent API quota limits and token bloat during generation, AI subagents should not be forced to read massive JSON files containing the entire exam. Instead, the orchestrating script must extract the specific raw text for the assigned question(s) and save it to a small, isolated temporary file (e.g., scratch/Q1_context.txt). The subagent is then instructed to read ONLY this isolated text file to get its context.
+
+## 7. Model Restrictions
+- **NEVER USE ANY FLASH MODEL.** Under absolutely no circumstances should `flash` OR `flash_lite` be used. All generation, whether in the main thread or via subagents, MUST use the primary model (e.g., by selecting `inherit` for subagents). All Flash-family models are strictly banned.
