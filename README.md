@@ -1,4 +1,4 @@
-# philnits-vault
+# <img src="assets/icon-192.png" width="40" align="top" alt="pelnets logo" /> philnits-vault
 
 A flashcard Obsidian vault containing all past exam questions & explanations for the PhilNITS exam: created to collaboratively prepare for the upcoming PhilNITS exam in a single week.
 
