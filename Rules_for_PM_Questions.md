@@ -9,6 +9,7 @@ To ensure consistency, readability, and token efficiency, strictly follow these 
 - Split the PM question into separate markdown files based on its **Subquestions**.
 - **Naming Convention:** `[Year][Season]_FE_PM_[Q].[SQ].md`
   - *Example:* For Question 1, if it has 2 subquestions, create `2021S_FE_PM_1.1.md` and `2021S_FE_PM_1.2.md`.
+- **H1 Header:** The file must start with an H1 header that exactly matches the filename without the extension: `# [Year][Season]_FE_PM_[Q].[SQ]`
 - Store all PM files in their respective `[Year]/PM/` folder.
 
 ## 2. Image Cropping and Embedding (Context Rules)

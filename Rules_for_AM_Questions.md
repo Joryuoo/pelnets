@@ -5,8 +5,8 @@ When processing AM (Morning) exam questions (e.g., `2021A_FE_AM`, `2022S_FE_AM`)
 These rules supersede any previous conventions when dealing with AM questions.
 
 ## 1. File Naming and Header
-* **File Name:** `{Year}{Season}_FE_AM_{QuestionNumber}.md` (e.g., `2021A_FE_AM_25.md`)
-* **H1 Header:** Must exactly match the filename without the extension: `# {Year}{Season}_FE_AM_{QuestionNumber}`
+* **File Name:** `{Year}{Season}_FE_{QuestionNumber}.md` (e.g., `2021A_FE_25.md`)
+* **H1 Header:** Must exactly match the filename without the extension: `# {Year}{Season}_FE_{QuestionNumber}`
 * **No Question Prefix:** Do **NOT** start the actual question text with `Q1.` or `Q{number}.` The H1 header is sufficient.
 
 ## 2. YAML Metadata and Strict Tags
