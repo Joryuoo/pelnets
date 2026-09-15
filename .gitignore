@@ -3,3 +3,5 @@
 .obsidian/workspace-mobile.json
 .DS_Store
 .obsidian/.DS_Store
+.exam_work/
+__pycache__/

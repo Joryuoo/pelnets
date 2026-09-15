@@ -37,6 +37,26 @@ This fork significantly improves the original vault's flashcard organization and
 
 ## Usage
 
+### Preparing a new exam paper with fewer AI tokens
+
+`prepare_exam.py` handles AM/PM and newer Subject A/B PDFs. It finds question headings from PDF line positions, crops images locally, and writes one small text context per question (or a scenario file plus a subquestion file for PM). It does **not** invent an answer, topic, or explanation. Those require review against the answer key and question image.
+
+Install the local dependencies with `python -m pip install pymupdf pillow`, then run:
+
+```bash
+python prepare_exam.py prepare "Exam_Q&A/2012/April/2012S_FE_PM_Question.pdf" --work ".exam_work/2012S_PM"
+```
+
+The work folder contains `manifest.json`, cropped `images/`, targeted `contexts/`, `answer_key.txt` when an answer PDF is present, and `review.example.json`. Inspect the detected boundaries and screenshots. Copy the example JSON to `review.json`, then fill each card's registered `topics`, official `answer`, and explanation. For plain-text AM or Subject A cards, optionally fill `front_text` with the full question and all four choices; otherwise the prepared image is used.
+
+```bash
+python prepare_exam.py build --work ".exam_work/2012S_PM" --review ".exam_work/2012S_PM/review.json"
+```
+
+The build step validates tags, answer format, and explanations before copying selected images to `Files/` and writing notes to the year folder. It refuses to overwrite existing notes or images. Add an optional `references` list to a review entry only when you have useful sources to cite; the exam question and answer PDFs are not added automatically. For PM cards, subquestion 1 embeds the full scenario and its own question; later subquestions embed only their own question. An ambiguous or missing heading causes `prepare` to stop for manual review instead of silently skipping a card. The spring 2020 PM question PDF currently has no detectable Q3 or Q7 heading and needs source inspection before using this workflow.
+
+The older PDF extraction, cropping, batching, and answer-guessing scripts have been removed. `prepare_exam.py` is the maintained exam workflow. `check_unused_images.py` is a separate vault cleanup tool: run `python check_unused_images.py` for a read-only report, or `python check_unused_images.py --move` to move reported images to `unused_images_dummy/` after reviewing the list.
+
 ### 1. Clone the Repository
 
 ```bash
@@ -134,10 +154,6 @@ This is the end of the explanation, I hope you now understand why c) is the answ
 
 %% ignore this, it's the flashcard terminator %%
 ---
-
-# References %% add your references here %%
-
--
 ```
 
 - put the correct answer in the FIRST LINE of the flashcard answer.
