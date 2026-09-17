@@ -309,7 +309,7 @@ def build(work: Path, review_path: Path, root: Path) -> int:
         )
         front = data.get("front_text", "").strip() if manifest["paper"] in ("AM", "A") else ""
         if not front:
-            front = "\n".join(f"![[{image}]]" for image in card["images"])
+            front = "\n".join(f"![[Files/{image}]]" for image in card["images"])
         text = (f'---\ncreated: {created}\nstatus: "#philnits"\ntags:\n'
                 f'{topic_tags}\n  - year/{manifest["year"]}\n---\n\n'
                 f'# {card["title"]}\n\n{front}\n?\n{data["answer"].strip()}\n\n'
