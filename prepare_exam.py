@@ -90,7 +90,8 @@ def find_boundaries(doc: pymupdf.Document, paper: str):
                 raise ValueError("Could not identify the actual Q1 heading")
             questions[q] = before_q2[-1]
         else:
-            raise ValueError(f"Duplicate Q{q} headings: {positions}")
+            print(f"Warning: Duplicate Q{q} headings: {positions}. Using the first one.")
+            questions[q] = positions[0]
     actual = sorted(questions)
     if actual != list(range(1, actual[-1] + 1)):
         raise ValueError(f"Question headings are incomplete: {actual}")
