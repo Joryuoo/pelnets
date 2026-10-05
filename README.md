@@ -4,11 +4,24 @@ A comprehensive flashcard Obsidian vault and **Ultimate PhilNITS Reviewer** cont
 
 🌟 **[Access the Web App Reviewer: pelnets.vercel.app/decks](https://pelnets.vercel.app/decks)** 🌟
 
-We've built a dedicated **PhilNITS Reviewer Web App** to make studying easier than ever!
-* **Offline Mode (PWA):** Install it on your phone or desktop and review questions anytime, anywhere, completely offline!
-* **Spaced Repetition System (SRS):** Built-in algorithm to help you memorize efficiently and focus on your weak points.
-* **Complete Q&A:** Beautifully rendered questions, images, and detailed explanations straight from this vault.
-* **Perfect for SEO:** The ultimate free online PhilNITS reviewer and study guide for passing the ITPEC FE exam.
+We've built a dedicated **PhilNITS Reviewer Web App** to make studying easier than ever. **Study anywhere, anytime**: on the bus, in a blackout, or between classes. Open it on your phone, tablet, or laptop and pick up right where you left off.
+
+| | Feature | What it does |
+| :-: | :-- | :-- |
+| 📴 | **Works fully offline (PWA)** | Install it to your home screen (iOS, Android, desktop Chrome/Edge). The app, math rendering, and diagram images are cached, so you can review with zero internet. |
+| 🧠 | **SRS engine (SM-2)** | Spaced-repetition scheduling with Again / Hard / Good / Easy ratings, a configurable daily review cap, and a Mistake Bank that brings back what you keep missing. |
+| ✏️ | **Scribble on questions** | Tap the pencil on any question to sketch over it while working out calculations and trace tables. |
+| 🟩 | **Activity heatmap** | A calendar heatmap of how many questions you reviewed each day, so you can see your consistency at a glance. |
+| 🔥 | **Streaks + freezes** | Daily study streaks, with streak freezes that forgive a missed day. |
+| 📊 | **Weak-topic analytics** | Recall accuracy per discipline, highlighting where to practice next. |
+| 🗂️ | **Flexible decks** | Study by topic, by exam year, or by topic + year, covering all the questions in this vault. |
+| 💾 | **Your data, your device** | Progress is stored locally in your browser. Cloud sync is optional and only runs when you ask it to. |
+| 📚 | **Complete Q&A** | Rendered questions, images, and detailed explanations straight from this vault. |
+
+> [!TIP]
+> Open the app, then use **Settings → Offline study** to install it and download images for offline use before you travel or lose connection.
+
+The web app's source lives at [jangkayl/PelNets](https://github.com/jangkayl/PelNets).
 
 > [!NOTE]
 > This repository is a fork maintained by [@Joryuoo](https://github.com/Joryuoo) and [@jangkayl](https://github.com/jangkayl).
@@ -228,3 +241,12 @@ This is the end of the explanation, I hope you now understand why c) is the answ
 
 > [!TIP]
 > For detailed topic descriptions, keywords, and mapping rules, see [[Registered_Categories.md]].
+
+## Contributors & Maintainers
+
+- **Maintainers:** [@Joryuoo](https://github.com/Joryuoo) and [@jangkayl](https://github.com/jangkayl)
+- **Original authors / contributors:** [usc-cisco](https://github.com/usc-cisco), creators of the upstream [philnits-vault](https://github.com/usc-cisco/philnits-vault) this project is forked from
+
+## License
+
+The additions and modifications made in this fork are open source under the [MIT License](LICENSE). Content inherited from the upstream [usc-cisco/philnits-vault](https://github.com/usc-cisco/philnits-vault), which does not currently declare a license, remains the work of its original authors. Exam questions originate from PhilNITS/ITPEC past papers.
