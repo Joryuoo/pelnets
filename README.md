@@ -242,6 +242,11 @@ This is the end of the explanation, I hope you now understand why c) is the answ
 > [!TIP]
 > For detailed topic descriptions, keywords, and mapping rules, see [[Registered_Categories.md]].
 
+## Contributors & Maintainers
+
+- **Maintainers:** [@Joryuoo](https://github.com/Joryuoo) and [@jangkayl](https://github.com/jangkayl)
+- **Original authors / contributors:** [usc-cisco](https://github.com/usc-cisco), creators of the upstream [philnits-vault](https://github.com/usc-cisco/philnits-vault) this project is forked from
+
 ## License
 
-This project is open source under the [MIT License](LICENSE).
+The additions and modifications made in this fork are open source under the [MIT License](LICENSE). Content inherited from the upstream [usc-cisco/philnits-vault](https://github.com/usc-cisco/philnits-vault), which does not currently declare a license, remains the work of its original authors. Exam questions originate from PhilNITS/ITPEC past papers.
