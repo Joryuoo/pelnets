@@ -70,6 +70,22 @@ The build step validates tags, answer format, and explanations before copying se
 
 The older PDF extraction, cropping, batching, and answer-guessing scripts have been removed. `prepare_exam.py` is the maintained exam workflow. `check_unused_images.py` is a separate vault cleanup tool: run `python check_unused_images.py` for a read-only report, or `python check_unused_images.py --move` to move reported images to `unused_images_dummy/` after reviewing the list.
 
+### Finding repeating AM / Subject A questions
+
+Run the local scanner to compare all available question PDFs across years and sessions:
+
+```powershell
+python scan_repeating_questions.py
+python scan_repeating_questions.py --years 2015-2026 --open
+python scan_repeating_questions.py --years 2007,2009,2024-2026 --papers AM A --min-similarity 0.85
+```
+
+Requires Python and PyMuPDF (`python -m pip install pymupdf`). No API keys, OCR, uploads, or internet connection are used. The default report is `reports/repeating-questions/index.html`, with `results.json` and cropped source previews alongside it. This generated directory is ignored by Git. Use `--root` to scan another vault and `--output` to choose another generated-output folder; custom folders are not automatically ignored. The browser opens only with `--open`.
+
+The report includes searchable, paginated exact-text groups and strong (90%+) / moderate (80–90%) near-match pairs. Exact matching ignores formatting and choice order while preserving values and mathematical operators. Similarity scores measure text resemblance, not the probability of equivalence. Near matches include value/wording variants and remain individual comparisons. Diagrams, tables, unreadable characters, and incomplete choices appear in a separate visual-review queue with source previews. All flagged questions are also available under **All questions needing review**, including those without a matching candidate. Answers and explanations are excluded.
+
+Coverage lists extraction failures and missing local sessions. Boundary ambiguity causes a paper to be reported as a failure instead of silently selecting a heading. Exit code `0` means the selected sources were extracted; `2` means an incomplete or empty scan (a report is still generated); `1` means report generation failed. Visual review can still be needed after exit code `0`. The scanner preserves PDFs and notes and never removes duplicates. Run regression checks with `python -m unittest test_scan_repeating_questions.py`.
+
 ### 1. Clone the Repository
 
 ```bash

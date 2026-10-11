@@ -8,7 +8,7 @@ tags:
 
 # 2015May_FE_PM_1.1
 
-![[2015May_FE_PM_Q1_Body_p1.png]]
+
 ![[2015May_FE_PM_Q1_SQ1_p1.png]]
 ![[2015May_FE_PM_Q1_SQ1_p2.png]]
 
